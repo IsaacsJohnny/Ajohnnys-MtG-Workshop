@@ -1,14 +1,17 @@
 
-
+/* Type Selectors */
 
 h1 {
     background-color: lightgray;
 }
 
+body {
+    background-image: url("HiThere.jpg");
+    background-color: #cccccc;
+   }
 
 
-
-
+/* Pseudo Selectors */ 
 
 a:link {
     color: turquoise;
