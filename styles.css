@@ -1,0 +1,28 @@
+
+
+
+h1 {
+    background-color: lightgray;
+}
+
+
+
+
+
+
+a:link {
+    color: turquoise;
+}
+
+a:visited {
+    color: lightslategray;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:focus {
+    color: black;
+    background-color: turquoise;
+}
