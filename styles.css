@@ -27,13 +27,20 @@ body {
   border: 2px solid turquoise;
 }
 
-.footer-container, .main aside {
+.footer-container {
   border-top: 2px solid turquoise;
   text-align: center;
 }
 
 .header-container, .footer-container, .main aside {
   background: #363636;
+}
+
+aside {
+  padding: 15px 15px;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid turquoise;
 }
 
 nav ul {
@@ -49,13 +56,14 @@ nav a {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: white;
-  background: #599a68;
+  color:black;
+  background: turquoise;
 }
 
 p {
   color: whitesmoke;
 }
+
 
 /* Class Selectors */
 
@@ -75,12 +83,21 @@ a:hover, a:visited {
   text-decoration: underline;
 }
 
+/* Flex-box */
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+
 /* Meadia Queries */
 
 @media only screen and (min-width: 480px) {
   nav a {
     float: left;
-    width: 20%;
+    width: 30%;
     margin: 0 0 0 5%;
     padding: 25px 1%;
     margin-bottom: 0;
