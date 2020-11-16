@@ -36,6 +36,10 @@ body {
   background: #363636;
 }
 
+.placeholderRed {
+  background-color: tomato;
+}
+
 aside {
   padding: 15px 15px;
   margin: 20px;
