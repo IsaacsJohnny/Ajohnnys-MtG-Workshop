@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="heading">Ajohnny's MTG Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscript.js"></script>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">Ajohnny's MTG Workshop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="local-shops.html">Shops</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container">
+        <h1 class="contact">Contact Us</h1>
+        <form onsubmit="return false">
+
+            
+            <input type="text" placeholder="Enter your first name" id="firstName" />
+            <input type="text" placeholder="Enter your last name" id="lastName" />
+            <input type="email" placeholder="Enter your email" id="email" />
+            <input type="checkbox" id="mailinglist" />Join our mailing list
+            <span>What is your question?</span>
+            <textarea id="question" rows="9"></textarea>
+            <button onclick="sendContact();">Submit</button>
+
+
+
+        </form>
+    </div>
+
+    <div class="footer-container">
+        <footer>
+            <p><small>&copy;2020 Ajohnny's MtG Workshop</small></p>
+        </footer>
+    </div>
+</body>
+
+</html>

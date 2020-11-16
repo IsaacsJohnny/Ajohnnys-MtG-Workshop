@@ -1,0 +1,190 @@
+/****  Base Styles ****/
+
+html {
+  color: whitesmoke;
+  font-size: 1em;
+  line-height: 1.4;
+  box-sizing: border-box;
+  background-color: rgb(73, 72, 72);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Helvetica Neue, Arial;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-container {
+  border: 2px solid turquoise;
+}
+
+.footer-container {
+  border-top: 2px solid turquoise;
+  text-align: center;
+  padding-bottom: 1px;
+  flex-shrink: 0;
+}
+
+.header-container, .footer-container, .main aside {
+  background: #363636;
+}
+
+.placeholderRed {
+  background-color: tomato;
+}
+
+aside {
+  padding: 15px 15px;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid turquoise;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+  background: turquoise;
+}
+
+p {
+  color: whitesmoke;
+}
+
+h3 {
+  color: turquoise;
+}
+
+
+/**** Class Selectors ****/
+
+.title {
+  color: turquoise;
+}
+
+/**** Pseudo Selectors ****/
+
+a:link {
+  text-decoration: none;
+  color: rgb(37, 34, 248);
+}
+
+a:hover, a:visited {
+  color: rgb(165, 54, 11);
+  text-decoration: underline;
+}
+
+/**** Contact Form ****/
+
+input[type=text], textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #363636;
+  padding: 20px;
+}
+
+/**** Flex-box ****/
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+
+/**** Meadia Queries ****/
+
+@media only screen and (min-width: 480px) {
+  nav a {
+    float: left;
+    width: 30%;
+    margin: 0 0 0 5%;
+    padding: 25px 1%;
+    margin-bottom: 0;
+  }
+  nav li:first-child a {
+    margin-left: 0;
+  }
+  nav li:last-child a {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px), only screen and (min-width: 700px) and (orientation: landscape) {
+  .title {
+    float: left;
+    font-size: 1.4em;
+  }
+  nav {
+    float: right;
+    width: 60%;
+  }
+  nav a {
+    padding: 15px 1%;
+  }
+  .main article {
+    float: left;
+    width: 57%;
+  }
+  .main aside {
+    float: right;
+    width: 38%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 1026px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2em;
+  }
+  nav a {
+    padding: 25px 1%;
+  }
+}
+
+/****  Clear Fix ****/
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
