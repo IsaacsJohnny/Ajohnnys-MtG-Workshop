@@ -1,4 +1,4 @@
-/*  Base Styles */
+/****  Base Styles ****/
 
 html {
   color: whitesmoke;
@@ -30,6 +30,8 @@ body {
 .footer-container {
   border-top: 2px solid turquoise;
   text-align: center;
+  padding-bottom: 1px;
+  flex-shrink: 0;
 }
 
 .header-container, .footer-container, .main aside {
@@ -68,14 +70,18 @@ p {
   color: whitesmoke;
 }
 
+h3 {
+  color: turquoise;
+}
 
-/* Class Selectors */
+
+/**** Class Selectors ****/
 
 .title {
   color: turquoise;
 }
 
-/* Pseudo Selectors */
+/**** Pseudo Selectors ****/
 
 a:link {
   text-decoration: none;
@@ -87,7 +93,26 @@ a:hover, a:visited {
   text-decoration: underline;
 }
 
-/* Flex-box */
+/**** Contact Form ****/
+
+input[type=text], textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #363636;
+  padding: 20px;
+}
+
+/**** Flex-box ****/
 
 .flex-container {
   display: flex;
@@ -96,7 +121,7 @@ a:hover, a:visited {
 }
 
 
-/* Meadia Queries */
+/**** Meadia Queries ****/
 
 @media only screen and (min-width: 480px) {
   nav a {
@@ -149,7 +174,7 @@ a:hover, a:visited {
   }
 }
 
-/*  Clear Fix */
+/****  Clear Fix ****/
 
 .clearfix:before, .clearfix:after {
   content: " ";
