@@ -56,6 +56,7 @@ function sendContact() {
         let user = new User(fields.firstName.value, fields.lastName.value, fields.email.value, fields.mailinglist.checked, fields.question.value);
 
         alert(`${user.firstName} thanks for contacting us.`);
+        document.getElementById("myForm").reset();
 
     } else {
         alert("There was an error. An input field may be missing content.");
