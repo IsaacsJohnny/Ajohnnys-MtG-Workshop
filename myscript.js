@@ -13,14 +13,14 @@ function isNotEmpty(value) {    /* This is a two part function. The first part c
 }
 
 function isEmail(email) {
-    let regex = /\S+@\S+\.\S+/;
+    let regex = /\S+@\S+\.\S+/; /* This matches one or more non-space characters, followed by "@", followed by one or more non-space chars, followed by ".", followed by one or more non-space chars */
     return regex.test(String(email).toLowerCase()); /* This regex checks to see that the email addressed entered is properly formatted */
 }
 
-function fieldValidation(field, validationFunction) { /* This function is testing that the field itself exists. */  
-    if (field == null) return false;
+function fieldValidation(field, validationFunction) {   
+    if (field == null) return false; /* This is testing that field is not null */
 
-    let isFieldValid = validationFunction(field.value); /*This is testing the validity of the field value */
+    let isFieldValid = validationFunction(field.value); /*This is testing the validity of the field value with the function I passed in */
     if (!isFieldValid) {
         field.className = 'placeholderRed'; /* If field is not valid, change the field red, well tomato actually */
     } else {
@@ -30,7 +30,7 @@ function fieldValidation(field, validationFunction) { /* This function is testin
     return isFieldValid;
 }
 
-function isValid() { /* This function combines all the checks and returns the combined value */
+function isValid() { /* This function combines all the checks and returns the combined value. If all the fields are valid, this will return true. */
     var valid = true;
 
     valid &= fieldValidation(fields.firstName, isNotEmpty);
@@ -41,8 +41,8 @@ function isValid() { /* This function combines all the checks and returns the co
     return valid;
 }
 
-class User {    /* Created the class User to combine the multiple values together. */
-    constructor(firstName, lastName, email, mailinglist, question) {    /* The constructor method will take all the values for the User class */
+class User {    /* Created the class User to combine the multiple values together. I would send this to future me in order to save input to database. */
+    constructor(firstName, lastName, email, mailinglist, question) {    /* The constructor method will take all the values and make a User. */
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -52,9 +52,10 @@ class User {    /* Created the class User to combine the multiple values togethe
 }
 
 function sendContact() {    /* This is the main function I call from the HTML button on my form */
-    if (isValid()) {
+    if (isValid()) { /* Checking the validity of all input fields */
+        
         let user = new User(fields.firstName.value, fields.lastName.value, fields.email.value, fields.mailinglist.checked, fields.question.value);
-        /* ^Checking the validity of the above fields^ */
+        /* I would send future me all the user data from here. */
         alert(`${user.firstName} thanks for contacting us.`); /* If all valid and submission is successful, this alert is displayed */
         document.getElementById("myForm").reset(); /* This function clears the form after a successful submission */
 

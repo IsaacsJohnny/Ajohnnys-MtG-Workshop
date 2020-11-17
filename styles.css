@@ -18,7 +18,7 @@ body {
   line-height: 26px;
 }
 
-.wrapper {  /* Wraps all of the body except the nav bar */
+.wrapper {  /* Wraps all of the body except the header and footer */
   width: 90%;
   margin: 0 auto;
 }
@@ -34,7 +34,7 @@ body {
   flex-shrink: 0;
 }
 
-.header-container, .footer-container, .main aside { /* Background color for entire page */
+.header-container, .footer-container, .main aside { /* Background color for header, footer, and aside */
   background: #363636;
 }
 
@@ -49,13 +49,15 @@ aside { /* I wanted the first page to look a bit more dramatic, so I added an as
   border: 2px solid turquoise;
 }
 
+/* Positioning/styling the nav bar */
+
 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-nav a { /* Positioning/styling the nav bar */
+nav a { 
   display: block;
   margin-bottom: 10px;
   padding: 15px 0;
@@ -107,10 +109,9 @@ input[type=text], textarea {
 }
 
 .container {
-  border-radius: 5px; /* Rounds corners of container */
   background-color: #363636;
   padding: 20px;
-}
+} 
 
 /**** Flex-box ****/
 
