@@ -138,7 +138,7 @@ input[type=text], textarea {
 
 /**** Dice Roller Styles ****/
 
-.diceContainer {    /* After finishing my requirements for this project, I wanted to add some JS functional extras. I found this dice roller on Codepen and decided to include it. */
+.diceContainer {    /* After finishing my requirements for this project, I wanted to add something extra. I found this dice roller on Codepen and decided to include it for fun and functionality. */
   background: #363636;
   color: turquoise;
   width: 300px;
@@ -179,10 +179,6 @@ p {
   vertical-align: middle;
   padding-top: 2px;
 }
-
-/**** Life Counter ****/
-
-
 
 /**** Flex-box ****/
 
