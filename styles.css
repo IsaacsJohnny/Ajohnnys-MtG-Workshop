@@ -4,11 +4,13 @@ html {
   color: whitesmoke;
   font-size: 1em;
   line-height: 1.4;
-  box-sizing: border-box; /* width or height + padding + border = actual width or height */
+  box-sizing: border-box;
+  /* width or height + padding + border = actual width or height */
   background-color: rgb(73, 72, 72);
 }
 
-*, *:before, *:after {  /* Insures the inheritance of box-sizing throughout */
+*, *:before, *:after {
+  /* Insures the inheritance of box-sizing throughout */
   box-sizing: inherit;
 }
 
@@ -18,7 +20,8 @@ body {
   line-height: 26px;
 }
 
-.wrapper {  /* Wraps all of the body except the header and footer */
+.wrapper {
+  /* Wraps all of the body except the header and footer */
   width: 90%;
   margin: 0 auto;
 }
@@ -34,22 +37,40 @@ body {
   flex-shrink: 0;
 }
 
-.header-container, .footer-container, .main aside { /* Background color for header, footer, and aside */
+.header-container, .footer-container, .main aside {
+  /* Background color for header, footer, and aside */
   background: #363636;
 }
 
-.placeholderRed { /* This is the background colore for the error validation in JS */
+.placeholderRed {
+  /* This is the background colore for the error validation in JS */
   background-color: tomato;
 }
 
-aside { /* I wanted the first page to look a bit more dramatic, so I added an aside */
+h3 {
+  color: turquoise;
+}
+
+article {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/**** Aside ****/
+
+aside {
+  /* I wanted the first page to look a bit more dramatic, so I added an aside */
   padding: 15px 15px;
-  margin: 20px;
+  margin: 25px;
   text-align: center;
   border: 2px solid turquoise;
 }
 
-/* Positioning/styling the nav bar */
+aside div {
+  margin: 10px;
+}
+
+/**** Positioning/styling the nav bar ****/
 
 nav ul {
   margin: 0;
@@ -57,25 +78,24 @@ nav ul {
   list-style-type: none;
 }
 
-nav a { 
+nav a {
   display: block;
   margin-bottom: 10px;
   padding: 15px 0;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color:black;
+  color: black;
   background: turquoise;
 }
 
-p {
+/* p {
   color: whitesmoke;
-}
+} */
 
-h3 {
+aside h2 {
   color: turquoise;
 }
-
 
 /**** Class Selectors ****/
 
@@ -98,33 +118,85 @@ a:hover, a:visited {
 /**** Contact Form ****/
 
 input[type=text], textarea {
-  width: 100%;  /* Full width */
-  padding: 12px; 
-  border: 1px solid turquoise;  /* Solid 1px turquoise border around input fields */
-  border-radius: 5px; /* Rounds the border of input fields slightly */
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical /* User can resize text area vertically but not horizontally */
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  border: 1px solid turquoise;
+  /* Solid 1px turquoise border around input fields */
+  border-radius: 5px;
+  /* Rounds the border of input fields slightly */
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical/* User can resize text area vertically but not horizontally */
 }
 
 .container {
   background-color: #363636;
   padding: 20px;
-} 
+}
+
+/**** Dice Roller Styles ****/
+
+.diceContainer {    /* After finishing my requirements for this project, I wanted to add some JS functional extras. I found this dice roller on Codepen and decided to include it. */
+  background: #363636;
+  color: turquoise;
+  width: 300px;
+  height: 330px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 25px 0;
+  font-size: 1.5em;
+  border: 2px solid turquoise;
+}
+
+.diceArea {
+  margin: 0 auto 20px auto;
+  width: 150px;
+  background: #000
+}
+
+button {
+  padding: 5px;
+  margin-right: 30px;
+  background: turquoise;
+  border: none;
+  box-shadow: 3px 5px 5px #000;
+}
+
+button:hover {
+  box-shadow: inset 1px 1px 1px #000;
+  cursor: pointer;
+}
+
+button:active {
+  background: #696;
+  box-shadow: inset 1px 1px 3px #000;
+}
+
+p {
+  display: inline;
+  vertical-align: middle;
+  padding-top: 2px;
+}
+
+/**** Life Counter ****/
+
+
 
 /**** Flex-box ****/
 
 .flex-container {
   display: flex;
-  flex-flow: row wrap;  /*shorthand for the flex-direction and flex-wrap */
+  flex-flow: row wrap;
+  /*shorthand for the flex-direction and flex-wrap */
   justify-content: space-evenly;
 }
 
-
 /**** Meadia Queries ****/
 
-@media only screen and (min-width: 480px) { /* Changes occur when brower window is 480px or less */
+@media only screen and (min-width: 480px) {
+  /* Changes occur when brower window is 480px or less */
   nav a {
     float: left;
     width: 30%;
@@ -132,16 +204,21 @@ input[type=text], textarea {
     padding: 25px 1%;
     margin-bottom: 0;
   }
-  nav li:first-child a {  /* Select and style the nav li a element that is the first child of its parent */
+  nav li:first-child a {
+    /* Select and style the nav li a element that is the first child of its parent */
     margin-left: 0;
   }
-  nav li:last-child a {   /* Select and style the nav li a element that is the last child of its parent */ 
+  nav li:last-child a {
+    /* Select and style the nav li a element that is the last child of its parent */
     margin-right: 0;
   }
-} /* This repositions the nav bar as the browser window shrinks or is viewed on a smaller browser window */
+}
+
+/* This repositions the nav bar as the browser window shrinks or is viewed on a smaller browser window */
 
 @media only screen and (min-width: 768px), only screen and (min-width: 700px) and (orientation: landscape) {
-  .title {  /* Adding breakpoints and correcting for landscape orientation on phones and tablets */
+  .title {
+    /* Adding breakpoints correcting for landscape orientation on phones and tablets */
     float: left;
     font-size: 1.4em;
   }
@@ -162,9 +239,11 @@ input[type=text], textarea {
   }
 }
 
-@media only screen and (min-width: 1140px) {  /* Changes occur when brower window is 1140px or less */
+@media only screen and (min-width: 1140px) {
+  /* Changes occur when brower window is 1140px or less */
   .wrapper {
-    width: 1026px; /* Maximum width at largest browser size */
+    width: 1026px;
+    /* Maximum width at largest browser size */
     margin: 0 auto;
   }
   .title {
@@ -177,12 +256,14 @@ input[type=text], textarea {
 
 /****  Clear Fix ****/
 
-.clearfix:before, .clearfix:after { /* If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. So, force an element to self-clear its children */
+.clearfix:before, .clearfix:after {
+  /* If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. So, force an element to self-clear its children */
   content: " ";
   display: table;
 }
 
-.clearfix:after { /* This was how one of the treehouse instructor programed his clearfix and it worked for me. */
+.clearfix:after {
+  /* This was how one of the treehouse instructor programed his clearfix and it worked for me. */
   clear: both;
 }
 
