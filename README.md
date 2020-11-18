@@ -13,4 +13,4 @@ valid, a message returns, "${user.firstName} thanks for contacting us."
 
 **Extra**
 1. I decided to add a dice roller to the site, beyond the scope of the requirements. Rolling different types of dice comes up all the time in MTG
-and I thought it would be a fun addition to the site. I searched around on codepen and found one that I liked and brought it over from there. I copy/pasted it over and made some style changes in the CSS to match it to the color theme.
+and I thought it would be a fun addition to the site. I searched around on codepen and found one that I liked and brought it over from there. I copy/pasted it over and made some style changes in the CSS to match it to the color theme. I do understand the HTML, CSS, and JS used, but I felt it was important to be clear that I did not create this from scratch. Rather, I searched through many dice rollers and choose one that I felt would work best on my site.
