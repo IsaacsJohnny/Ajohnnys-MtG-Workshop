@@ -10,3 +10,7 @@ The 3 required features of this site are as follows:
 2. Use Flexbox to organize content areas based on mobile or desktop views. Confirmed works.
 3. Create a form (such as a ‘Contact Us’ form), validate at least 1 input (example, ensure email is in the proper format), and then use that information on your page somehow. Confirmed works. If text fields are blank, returns an error message and highlights non-valid field red. If all fields are
 valid, a message returns, "${user.firstName} thanks for contacting us."
+
+**Extra**
+1. I decided to add a dice roller to the site, beyond the scope of the requirements. Rolling different types of dice comes up all the time in MTG
+and I thought it would be a fun addition to the site. I searched around on codepen and found one that I liked and brought it over from there. I copy/pasted it over and made some style changes in the CSS to match it to the color theme.
